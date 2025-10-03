@@ -1,7 +1,7 @@
 # Welcome to your Convex functions directory!
 
-Write your Convex functions here.
-See https://docs.convex.dev/functions for more.
+Write your Convex functions here. See https://docs.convex.dev/functions for
+more.
 
 A query function that takes two arguments looks like:
 
@@ -14,7 +14,7 @@ export const myQueryFunction = query({
   // Validators for arguments.
   args: {
     first: v.number(),
-    second: v.string(),
+    second: v.string()
   },
 
   // Function implementation.
@@ -29,7 +29,7 @@ export const myQueryFunction = query({
     // Write arbitrary JavaScript here: filter, aggregate, build derived data,
     // remove non-public properties, or create new objects.
     return documents;
-  },
+  }
 });
 ```
 
@@ -38,7 +38,7 @@ Using this query function in a React component looks like:
 ```ts
 const data = useQuery(api.myFunctions.myQueryFunction, {
   first: 10,
-  second: "hello",
+  second: "hello"
 });
 ```
 
@@ -53,7 +53,7 @@ export const myMutationFunction = mutation({
   // Validators for arguments.
   args: {
     first: v.string(),
-    second: v.string(),
+    second: v.string()
   },
 
   // Function implementation.
@@ -66,7 +66,7 @@ export const myMutationFunction = mutation({
 
     // Optionally, return a value from your mutation.
     return await ctx.db.get(id);
-  },
+  }
 });
 ```
 
@@ -80,11 +80,11 @@ function handleButtonPress() {
   // OR
   // use the result once the mutation has completed
   mutation({ first: "Hello!", second: "me" }).then((result) =>
-    console.log(result),
+    console.log(result)
   );
 }
 ```
 
-Use the Convex CLI to push your functions to a deployment. See everything
-the Convex CLI can do by running `npx convex -h` in your project root
-directory. To learn more, launch the docs with `npx convex docs`.
+Use the Convex CLI to push your functions to a deployment. See everything the
+Convex CLI can do by running `npx convex -h` in your project root directory. To
+learn more, launch the docs with `npx convex docs`.
