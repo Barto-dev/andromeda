@@ -1,8 +1,8 @@
 import { PropsWithChildren } from "react";
-import { AuthLayout } from "@/modules/auth/ui/layouts/AuthLayout";
+import { AuthGuard } from "@/modules/auth/ui/components/AuthGuard";
 
 const Layout = ({ children }: PropsWithChildren) => {
-  return <AuthLayout>{children}</AuthLayout>;
+  return <AuthGuard>{children}</AuthGuard>;
 };
 
 export default Layout;

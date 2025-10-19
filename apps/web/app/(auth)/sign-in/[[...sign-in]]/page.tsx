@@ -1,4 +1,4 @@
-import { SignIn } from "@clerk/nextjs";
+import { SignIn } from "@/modules/auth/ui/views/SignIn";
 
 const Page = () => {
   return <SignIn />;
